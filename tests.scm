@@ -10,8 +10,72 @@
 ;;; *** Add your own tests here! ***
 ;;; ********************************
 ; BEGIN PROBLEM 0
-'replace-this-line
-; END PROBLEM 0
+91
+
+; expect 91
+
+-91
+
+; expect -91
+
+(- 137 349)
+; expect -212
+
+(+ 8.8 9.9 10.1 6)
+; expect 34.8
+
+(* (5 * 5) (5 / 5))
+; expect 25
+
+(odd? 400)
+; expect #f
+
+(even? 38)
+; expect #t
+
+(define y (* 18 41))
+; expect y
+
+y
+; expect 738
+
+(/ (* 18 y) 40)
+; 332.1
+
+(define (operation y) (* y y))
+; expect operation
+
+operation
+; expect (lambda (y) (* y y))
+
+(operation 3)
+; expect 9
+
+(define pi_value 3.1415)
+; expect pi_value
+
+(eval (define pi_value 3.1415))
+; expect 3.1415
+
+(eval 'pi_value)
+; expect 3.1415
+
+(define pi_value (+ pi_value 4) (* 91 8))
+; expect Error
+
+'(+ 4 20)
+; expect (+ 4 20)
+
+(quote (2 (5 (4 (pi 5)))))
+; expect (2 (5 (4 (pi 5))))
+
+(begin (* 9 8) (/ 45 10) (+ 9 10))
+; expect 19
+
+(list pi_value y)
+; expect (3.1415 738)
+
+
 
 ;;; These are examples from several sections of "The Structure
 ;;; and Interpretation of Computer Programs" by Abelson and Sussman.
@@ -57,10 +121,10 @@
       6))
 ; expect 57
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Move the following (exit) line down the file to run additional tests. ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(exit)
 
 
 ;;; 1.1.2
